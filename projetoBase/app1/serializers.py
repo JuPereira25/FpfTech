@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Client
+from .models import Client, Product, Employee
 
 class ClientSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
@@ -12,3 +12,13 @@ class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
         fields = ['id', 'name', 'age', 'created_at']
+
+    class ProductSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = Product
+            fields = ['id', 'description', 'quantity']
+    
+    class EmployeeSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = Employee
+            fields = ['id', 'name', 'registration']
