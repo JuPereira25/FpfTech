@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-e%)2!)gkkh5(7gy1+p(1m35-zr$+1j+w205zunzxqlhav386k1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'projetoBase.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'projetobase',
+        'NAME': 'cursodjango',
         'HOST': '127.0.0.1',
         'PORT': '5432',
         'USER': 'postgres',
-        'PASSWORD': 'fpf'
+        'PASSWORD': 'Postgres'
     }
 }
 
