@@ -48,6 +48,9 @@ class Client(ModelBase):
         null=False
     )
 
+    def __str__(self):
+        return f"{self.id} - {self.name}"
+
 
 class Product(ModelBase):
     description = models.TextField(
@@ -59,6 +62,9 @@ class Product(ModelBase):
         null=False,
         default=0
     )
+
+    def __str__(self):
+        return f"{self.description[:30]}... Qtd: {self.quantity}"
 
 
 class Employee(ModelBase):
@@ -72,6 +78,9 @@ class Employee(ModelBase):
         max_length=15,
         null=False
     )
+
+    def __str__(self):
+        return f"{self.id} - {self.name}"
 
 
 class Sale(ModelBase):
